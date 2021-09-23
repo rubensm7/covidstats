@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/action_country"
+            android:enabled="true"
+            android:icon="@drawable/ic_covid"
+            android:title="@string/paises"
+            app:showAsAction="ifRoom" />
+
+
+    <item
+            android:id="@+id/action_region"
+            android:enabled="true"
+            android:icon="@drawable/ic_covid"
+            android:title="@string/regiones"
+            app:showAsAction="ifRoom" />
+
+
+</menu>

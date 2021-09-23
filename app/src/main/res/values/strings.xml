@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CovidStats</string>
+    <string name="paises">Países</string>
+    <string name="regiones">Regiones</string>
+</resources>
