@@ -1,4 +1,4 @@
-package com.ruben.covidstats.view
+package com.ruben.covidstats.ui.view
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ruben.covidstats.R
-import com.ruben.covidstats.viewmodel.RegionViewModel
+import com.ruben.covidstats.ui.viewmodel.RegionViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
