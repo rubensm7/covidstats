@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">CovidStats</string>
     <string name="paises"><u>Países</u></string>
-    <string name="regiones">Regiones</string>
+    <string name="regiones"><u>Regiones</u></string>
     <string name="selecciona_una_fecha">Selecciona una fecha</string>
     <string name="rango_de_fecha">Rango de fecha</string>
     <string name="cifras_globales">Cifras Globales</string>

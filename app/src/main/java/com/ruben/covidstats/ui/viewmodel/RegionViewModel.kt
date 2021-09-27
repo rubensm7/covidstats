@@ -26,6 +26,8 @@ class RegionViewModel @Inject constructor(private val repository: RegionReposito
             if (result != null) {
                 //First item - One date
                 regionModel.postValue(result.dates.values.first().countries.values.first().regions)
+                //Save data to send it to other activity
+                regionModelDateObject.postValue(result!!)
             }else{
                 regionModel.postValue(emptyList())
             }

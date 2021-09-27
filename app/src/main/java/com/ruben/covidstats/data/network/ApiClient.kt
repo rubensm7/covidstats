@@ -27,4 +27,10 @@ interface ApiClient {
     @GET("api/country/spain")
     suspend fun getRegionsByDateRange(@Query("date_from") dateFrom: String, @Query("date_to") dateTo: String): Response<DateObject>
 
+    @GET("api/{date}/country/spain/region/{region}")
+    suspend fun getRegionByDate(@Path("date") date: String, @Path("region") region: String): Response<DateObject>
+
+    @GET("api/country/spain/region/{region}")
+    suspend fun getRegionByDateRange(@Path("region") region: String,@Query("date_from") dateFrom: String, @Query("date_to") dateTo: String): Response<DateObject>
+
 }

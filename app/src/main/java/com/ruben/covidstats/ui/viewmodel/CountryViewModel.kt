@@ -28,6 +28,8 @@ class CountryViewModel @Inject constructor(private val repository: CountryReposi
                 countryModelTotal.postValue(result.total)
                 //First item - One date
                 countryModel.postValue(result.dates.values.first().countries.values.toList())
+                //Save data to send it to other activity
+                countryModelDateObject.postValue(result!!)
             }else{
                 countryModel.postValue(emptyList())
             }

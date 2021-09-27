@@ -11,10 +11,12 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ruben.covidstats.data.model.CountryModel
+import com.ruben.covidstats.data.model.RegionDetailProvider
 import com.ruben.covidstats.data.model.RegionModel
 import com.ruben.covidstats.databinding.RegionFragmentBinding
 import com.ruben.covidstats.ui.view.adapter.CountriesAdapter
 import com.ruben.covidstats.ui.view.activity.CountryDetailActivity
+import com.ruben.covidstats.ui.view.activity.RegionDetailActivity
 import com.ruben.covidstats.ui.view.adapter.RegionsAdapter
 import com.ruben.covidstats.ui.viewmodel.RegionViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -77,7 +79,7 @@ class RegionFragment : Fragment(), RegionsAdapter.OnItemClickListener {
     }
 
     override fun onItemClick(regionModel: RegionModel) {
-        val intent = Intent(activity, CountryDetailActivity::class.java)
+        val intent = Intent(activity, RegionDetailActivity::class.java)
         intent.putExtra("country", regionViewModel.getDataFromRange(regionModel.name))
         intent.putExtra("dateStart",binding.etDateStart.text.toString())
         intent.putExtra("dateEnd",binding.etDateEnd.text.toString())
