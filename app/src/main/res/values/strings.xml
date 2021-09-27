@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">CovidStats</string>
-    <string name="paises">Países</string>
+    <string name="paises"><u>Países</u></string>
     <string name="regiones">Regiones</string>
+    <string name="selecciona_una_fecha">Selecciona una fecha</string>
+    <string name="rango_de_fecha">Rango de fecha</string>
+    <string name="cifras_globales">Cifras Globales</string>
+    <string name="sin_ndatos">SIN\nDATOS</string>
+    <string name="seleccione_una_fecha_para_ver_datos">Seleccione una fecha para ver datos</string>
+    <string name="contagios">Contagios</string>
+    <string name="muertes">Muertes</string>
+    <string name="nuevos_contagios">Nuevos contagios</string>
+    <string name="nuevas_muertes">Nuevas muertes</string>
+    <string name="casos_abiertos">Casos abiertos</string>
+    <string name="recuperados">Recuperados</string>
 </resources>

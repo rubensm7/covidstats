@@ -1,4 +1,6 @@
 package com.ruben.covidstats.core
 
-class Extensions {
+//Extension for linebreak the integer
+fun Int.lineBreak(text: String):String{
+    return "$this\n$text"
 }

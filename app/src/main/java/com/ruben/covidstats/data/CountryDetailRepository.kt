@@ -1,23 +1,24 @@
 package com.ruben.covidstats.data
 
-import com.ruben.covidstats.data.model.CountryProvider
+import com.ruben.covidstats.data.model.CountryDetailProvider
 import com.ruben.covidstats.data.model.objects.DateObject
+import com.ruben.covidstats.data.network.CountryDetailService
 import com.ruben.covidstats.data.network.CountryService
 import javax.inject.Inject
 
-class CountryRepository @Inject constructor(private val api: CountryService, private val provider: CountryProvider) {
+class CountryDetailRepository @Inject constructor(private val api: CountryDetailService, private val provider: CountryDetailProvider) {
 
-
-    suspend fun getDataByDate(date: String): DateObject? {
-        val response = api.getDataByDate(date)
+    suspend fun getCountryByDate(date: String, country: String): DateObject?{
+        val response = api.getCountryByDate(date,country)
         provider.dateObject = response
         return response
     }
 
-    suspend fun getDataByDateRange(dateFrom: String, dateTo: String): DateObject?{
-        val response = api.getDataByDateRange(dateFrom,dateTo)
+    suspend fun getCountryByDateRange(dateFrom: String, dateTo: String, country: String): DateObject?{
+        val response = api.getCountryByDateRange(dateFrom,dateTo,country)
         provider.dateObject = response
         return response
     }
+
 
 }

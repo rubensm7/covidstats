@@ -1,4 +1,4 @@
-package com.ruben.covidstats.ui.view
+package com.ruben.covidstats.ui.view.fragment
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle

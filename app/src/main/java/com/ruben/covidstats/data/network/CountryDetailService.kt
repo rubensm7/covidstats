@@ -5,18 +5,18 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-class CountryService @Inject constructor(private val api: ApiClient){
+class CountryDetailService @Inject constructor(private val api: ApiClient){
 
-    suspend fun getDataByDate(date: String): DateObject? {
+    suspend fun getCountryByDate(date: String,country: String): DateObject? {
         return withContext(Dispatchers.IO){
-            val response = api.getCountriesByDate(date)
+            val response = api.getCountryByDate(date,country)
             response.body()
         }
     }
 
-    suspend fun getDataByDateRange(dateFrom: String,dateTo: String): DateObject?{
+    suspend fun getCountryByDateRange(dateFrom: String, dateTo: String,country: String): DateObject? {
         return withContext(Dispatchers.IO){
-            val response = api.getCountriesByDateRange(dateFrom,dateTo)
+            val response = api.getCountryByDateRange(country,dateFrom,dateTo)
             response.body()
         }
     }

@@ -1,4 +1,4 @@
-package com.ruben.covidstats.model
+package com.ruben.covidstats.data.model
 
 import com.google.gson.annotations.SerializedName
 

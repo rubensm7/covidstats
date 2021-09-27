@@ -1,4 +1,11 @@
 package com.ruben.covidstats.data.model
 
-class CountryProvider {
+import com.ruben.covidstats.data.model.objects.CountriesObject
+import com.ruben.covidstats.data.model.objects.DateObject
+import javax.inject.Inject
+
+class CountryProvider @Inject constructor() {
+
+    var dateObject: DateObject? = null
+
 }

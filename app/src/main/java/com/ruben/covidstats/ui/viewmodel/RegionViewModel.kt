@@ -1,4 +1,4 @@
-package com.ruben.covidstats.viewmodel
+package com.ruben.covidstats.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 
