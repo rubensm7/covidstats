@@ -15,7 +15,7 @@ import com.ruben.covidstats.core.lineBreak
 import com.ruben.covidstats.data.model.CountryModel
 
 import com.ruben.covidstats.databinding.CountryFragmentBinding
-import com.ruben.covidstats.ui.view.CountriesAdapter
+import com.ruben.covidstats.ui.view.adapter.CountriesAdapter
 import com.ruben.covidstats.ui.view.activity.CountryDetailActivity
 import com.ruben.covidstats.ui.viewmodel.CountryViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -35,7 +35,7 @@ class CountryFragment : Fragment(), CountriesAdapter.OnItemClickListener {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = CountryFragmentBinding.inflate(inflater, container,false)
         return binding.root
     }

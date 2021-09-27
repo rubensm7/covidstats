@@ -72,7 +72,8 @@ class CountryViewModel @Inject constructor(private val repository: CountryReposi
 
         }
 
-        return lastCountry?.let { CountryModel(it.name,it.todayConfirmed,it.todayDeaths,newConfirmedTotal,newDeathsTotal,openCasesTotal,recoversTotal) }
+        return lastCountry?.let { CountryModel(it.name,it.todayConfirmed,it.todayDeaths,newConfirmedTotal,newDeathsTotal,openCasesTotal,recoversTotal,
+            emptyList()) }
 
     }
 

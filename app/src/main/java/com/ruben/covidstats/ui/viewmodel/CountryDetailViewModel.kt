@@ -55,7 +55,8 @@ class CountryDetailViewModel @Inject constructor(private val repository: Country
             lastCountry = date.value.countries.values.first()
         }
         //We return the more recent country with the rest of the data
-        return lastCountry?.let { CountryModel(it.name,it.todayConfirmed,it.todayDeaths,newConfirmedTotal,newDeathsTotal,openCasesTotal,recoversTotal) }
+        return lastCountry?.let { CountryModel(it.name,it.todayConfirmed,it.todayDeaths,newConfirmedTotal,newDeathsTotal,openCasesTotal,recoversTotal,
+            emptyList()) }
 
     }
 

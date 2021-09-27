@@ -1,4 +1,4 @@
-package com.ruben.covidstats.ui.view
+package com.ruben.covidstats.ui.view.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,21 +8,22 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ruben.covidstats.R
 import com.ruben.covidstats.core.lineBreak
 import com.ruben.covidstats.data.model.CountryModel
+import com.ruben.covidstats.data.model.RegionModel
 import com.ruben.covidstats.databinding.ItemCountryBinding
 
-class CountriesAdapter:
-    RecyclerView.Adapter<CountriesAdapter.ViewHolder>() {
+class RegionsAdapter:
+    RecyclerView.Adapter<RegionsAdapter.ViewHolder>() {
 
-    private var countries: List<CountryModel> = emptyList()
+    private var regions: List<RegionModel> = emptyList()
     private lateinit var mListener: OnItemClickListener
 
-    fun setData(newCountries: List<CountryModel>){
-        countries = newCountries
+    fun setData(newRegions: List<RegionModel>){
+        regions = newRegions
         notifyDataSetChanged()
     }
 
     interface OnItemClickListener{
-        fun onItemClick(countryModel: CountryModel)
+        fun onItemClick(regionModel: RegionModel)
     }
 
     fun onItemClickListener(listener: OnItemClickListener){
@@ -36,22 +37,22 @@ class CountriesAdapter:
     }
 
     override fun getItemCount(): Int {
-        return countries.size
+        return regions.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = countries[position]
+        val item = regions[position]
         holder.bind(item,mListener)
     }
 
     class ViewHolder(view: View, val context: Context): RecyclerView.ViewHolder(view){
         private val binding = ItemCountryBinding.bind(view)
 
-        fun bind(countryModel: CountryModel,listener: OnItemClickListener){
-            binding.tvName.text = countryModel.name
-            binding.tvConfirmed.text = countryModel.todayConfirmed.lineBreak(context.getString(R.string.contagios))
-            binding.tvDeath.text = countryModel.todayDeaths.lineBreak(context.getString(R.string.muertes))
-            binding.clItem.setOnClickListener { listener.onItemClick(countryModel) }
+        fun bind(regionModel: RegionModel,listener: OnItemClickListener){
+            binding.tvName.text = regionModel.name
+            binding.tvConfirmed.text = regionModel.todayConfirmed.lineBreak(context.getString(R.string.contagios))
+            binding.tvDeath.text = regionModel.todayDeaths.lineBreak(context.getString(R.string.muertes))
+            binding.clItem.setOnClickListener { listener.onItemClick(regionModel) }
         }
     }
 }
